@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>SignUp and Login</title>
+
+	<link rel="stylesheet" type="text/css" href="css/login-mobile.css" media="screen and (max-width: 576px)">
+	<link rel="stylesheet" type="text/css" href="css/login-desktop.css" media="screen and (min-width: 577px)">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<h2 id="header-style">Velkommen til Startup Central - opret <br> en bruger, eller login herunder.</h2>
+	<div class="su-container" id="su-container">
+		<div class="form-container sign-up-container">
+			<form method="post" id="registrationForm">
+				<input hidden name="formaction" value="registration" />
+				<h1>Tilmeld dig herunder</h1>
+				<input required name="username" type="text" placeholder="Name / Company Name" />
+
+
+				<input required name="email" type="email" placeholder="Email" />
+
+
+				<input required name="password" type="password" placeholder="Password" />
+
+
+				<div class="telephone-container">
+					<span class="areacode">+45</span>
+					<input required name="mobilenumber" type="text" placeholder="Mobile Number" class="mobileno"
+						maxlength="8" />
+				</div>
+				<input name="promocode" type="text" placeholder="Promo Code" />
+				<button type="submit">Opret bruger</button>
+			</form>
+		</div>
+
+
+		<!--Sign in form-->
+
+		<div class="form-container sign-in-container">
+			<form method="post" id="loginForm" style="">
+				<input hidden name="formaction" value="loginForm" />
+				<h1>Login.</h1>
+				<div class="social-container">
+					<a href="https://www.facebook.com/StartupCentral.dk/" class="social"><i
+							class="fab fa-facebook-f"></i></a>
+					<a href="https://www.linkedin.com/company/startupcentral-dk/" class="social"><i
+							class="fab fa-linkedin-in"></i></a>
+					<a href="https://www.instagram.com/startupcentral.dk/" class="social"><i
+							class="fab fa-instagram"></i></a>
+				</div>
+				<span>or use your account</span>
+				<input type="email" name="loginemail" placeholder="Email" />
+				<input type="password" name="loginpassword" placeholder="Password" />
+				<a href="javascript:void(0);" onclick="toggleLoginAndForgot()">Glemt dit kodeord?</a>
+				<button type="submit">login</button>
+			</form>
+
+			<form method="post" id="newPasswordForm" style="display: none;">
+				<input hidden name="formaction" value="SendNewPassword" />
+
+				<div class="row">
+					<div class="col-xs-12 col-md-12 col-sm-12">
+						<p>Indtast din e-mail adresse i feltet nedenfor, s&#229; fremsender vi dig en ny adgangskode</p>
+						<input type="email" required name="newPaswordMail" placeholder="E-mail" />
+					</div>
+
+				</div>
+				<div class="row">
+					<div class="col-sm-12 text-right">
+						<button type="submit" id="submitEmail" name="submitEmail" style="margin-bottom: 20px;">Send ny
+							adgangskode</button>
+						<button type="button" id="cancel" name="cancel"
+							onclick="toggleLoginAndForgot();">Annuller</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+
+
+
+
+
+
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left overlay-bottom">
+					<h1>
+						<h1>Velkommen tilbage!</h1>
+					</h1>
+					<h5>
+						<p>Er du ikke tilmeldt?</p>
+						<p><span>Opret dig nu.</span></p>
+					</h5>
+					<button class="ghost" id="signIn">TIMELD DIG In</button>
+				</div>
+				<div class="overlay-panel overlay-right overlay-top">
+					<h1>
+						<p><strong>ET MEDLEMSKAB KOSTER:</strong></p>
+						<h2><strong>149 KR/MD.</strong></h2>
+						<p><em>INKL. MOMS.</em></p>
+						<p>I gratis perioden er der ingen binding.<br />
+							Efter prøveperioden er udløbet vil der være
+							binding på løbende måned plus en måned.</p>
+					</h1>
+					<p>Allerede oprettet? Login her.</p>
+					<button class="ghost" type="button" id="signUp" onclick="toggleLoginAndForgot();">LOGIN</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Scripts 
+    <script src="/scripts/signup.js"></script>-->
+	<script type="text/javascript">
+		const signUpButton = document.getElementById('signUp');
+		const signInButton = document.getElementById('signIn');
+		const container = document.getElementById('su-container');
+
+		signUpButton.addEventListener('click', () => {
+			container.classList.add("top-panel-active");
+		});
+		signInButton.addEventListener('click', () => {
+			container.classList.remove("top-panel-active");
+		});
+	</script>
+
+
+</body>
+
+</html>
