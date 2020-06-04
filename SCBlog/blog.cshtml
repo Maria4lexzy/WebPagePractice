@@ -1,0 +1,304 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+
+@{
+	Layout = "SC_WebBase.cshtml";
+		var postCount=1;
+}
+
+@* the fun starts here *@
+
+<!DOCTYPE html>
+
+<html lang="da">
+
+
+<head>
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Startup Central - Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+
+</head>
+ <body>
+   <!-- Header -->
+   @Html.Partial("NavigationBar")
+@Html.Partial("Blog header")
+@Umbraco.RenderMacro("ezSearch", new {rootContentNodeId="24024", rootMediaNodeId="", indexType="CONTENT", searchFields="", previewFields="", previewLength="", pageSize="", hideFromSearchField="", searchFormLocation="",})
+@Umbraco.RenderMacro("ezSearch", new {rootContentNodeId="24024", rootMediaNodeId="", indexType="CONTENT", searchFields="blogTitle", previewFields="blogItem", previewLength="250", pageSize="10", hideFromSearchField="", searchFormLocation="BOTTOM",})
+@Umbraco.RenderMacro("ezSearch", new {rootContentNodeId="24024", rootMediaNodeId="", indexType="", searchFields="BlogItem", previewFields="BlogItme", previewLength="", pageSize="4", hideFromSearchField="", searchFormLocation="TOP",})
+@Umbraco.RenderMacro("ezSearch", new {rootContentNodeId="24024", rootMediaNodeId="", indexType="", searchFields="", previewFields="", previewLength="", pageSize="", hideFromSearchField="", searchFormLocation="",})
+<p>change 2</p>
+ <!-- Blog Main: containeng featured posts + editors choice + .... -->
+    <div class="container mt-5">
+        <div class=" row">
+    	@{IPublishedContent featureStory = Model.GetPropertyValue<IPublishedContent>("featuredStory");
+    		 var fImage = featureStory.GetPropertyValue<Image>("bImage");
+
+        	if (featureStory != null)
+        	{       <!-- Featured post -->
+                    <div class=" d-flex align-items-stretch  content-container  col-lg-7 col-xl-8 col-xxl-9">
+                        <div class="card card-item shadow-md  ">
+                               @if (fImage != null)
+                     {
+       
+               <img class="card-img-top" src="@fImage.GetCropUrl("blog")" alt="BLOG IMAGE MISSING, please bear with us">
+               }
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text text-muted">@featureStory.GetPropertyValue("excerpt")</p>
+                            </div>
+                            <div class="card-footer bg-transparent text-uppercase ">
+                                <div class="float-right my-auto"> <a href="@featureStory.Url" class="example_f "> <span>Read more</span></a>
+                                </div>
+                                <p>@featureStory.GetPropertyValue("authorName") | @featureStory.GetPropertyValue("authorTitle")</p>
+                            </div>
+                        </div>
+                    </div>
+            }
+    	}
+     
+            <!-- /Feautured post -->
+            <!-- side bar containing top picks and editors choice -->
+            <div class="d-none d-sm-none d-lg-block d-flex align-items-stretch  sidebar-container  col-lg-5 col-xl-4 col-xxl-3">
+                <div class="row">
+                    
+                   
+                        
+                        
+  
+                <!--top picks-->
+                    <div class="col-sm-6 col-md-12">
+                        <!-- top picks-->
+                        <div class="col-12">
+                            <p class="text-uppercase sidebar__headings text-center mt-sm-3 mt-md-3 mb-1 mt-lg-0">Top
+                                Picks
+                            </p>
+                        </div>
+     @{
+            var topPicks = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("topPicks");
+            foreach (var tPicks in topPicks)
+            {
+                        <div class="col-12 ">
+                            <div class="card card-item shadow mt-1">
+                                <div class="card-body py-3">
+                                    <div class="excerpt card-title  text-muted my-0"><a href="@tPicks.Url" >@tPicks.GetPropertyValue("blogTitle")
+                                    </a></div>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        @tPicks.GetPropertyValue("authorName") | @tPicks.GetPropertyValue("authorTitle")
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                }
+       }
+                     </div>
+       
+        
+        
+                          <!-- Editors Choice -->
+                    <div class="col-sm-6 col-md-12">
+                        <div class="col-12">
+                            <p class="text-uppercase sidebar__headings text-center mt-sm-3 mt-md-3 mb-0">editors choice
+                            </p>
+                        </div>
+      @{
+            var editorsChoice = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("editorsChoice");
+            foreach (var eChoice in editorsChoice)
+            { 
+                        <div class=" col-12 ">
+                            <div class="card card-item shadow mt-1">
+                                <div class="card-body py-3">
+                                    <div class="excerpt card-title text-muted my-0"><a href="@eChoice.Url" > @eChoice.GetPropertyValue("blogTitle")
+                                   </a> </div>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        @eChoice.GetPropertyValue("authorName") |  @eChoice.GetPropertyValue("authorTitle")
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                     
+                     }
+         }
+                </div>
+                     <!--end editors choice-->
+                </div>
+            </div>
+            <!-- /side bar -->
+        </div>
+    </div>
+    
+        @{
+    var pageSize = 4;
+    var page = 1; int.TryParse(Request.QueryString["page"], out page);
+    var items = Model.Children().Where(x => x.IsDocumentType("BlogItem")).OrderByDescending(x => x.CreateDate);
+    var totalPages = (int)Math.Ceiling((double)items.Count() / (double)pageSize);
+    
+
+    if (page > totalPages)
+    {
+        page = totalPages;
+    }
+    else if (page < 1)
+    {
+        page = 1;
+    }
+    }
+        <!-- Posts --> 
+    <div class="container my-5">
+        <div class="row ">
+        @{
+	        var blogItems = Model.Site().FirstChild("blog").Children("blogItem").Where(x => x.IsVisible());
+	       
+        }
+      
+    @foreach (var item in blogItems.Skip((page - 1) * pageSize).Take(pageSize)){
+	var typedMediaPickerSingle = item.GetPropertyValue<Image>("bImage");
+	var date=(item.GetPropertyValue<DateTime>("datePublished").ToString("dd-MM-yyyy"));
+
+       var cardColor=item.GetPropertyValue("cardColorPicker");
+       
+	@* displaying the rows of cards*@
+	if(postCount%4==2 || postCount%4==3)
+	{ 
+            <!-- small column -->
+            <div class="d-flex align-items-stretch col-md-5 mt-3">
+                <div class=" card card-item shadow"  style="background-color:@cardColor">
+                     @if (typedMediaPickerSingle != null)
+                     {
+       
+               <img class="card-img-top" src="@fImage.Url" alt="BLOG IMAGE MISSING, please bear with us">
+               }
+
+                    <p class="pl-3 pt-1 card-text bg-transparent text-muted">@item.GetPropertyValue("authorName") | @item.GetPropertyValue("authorTitle")
+                    </p>
+                    <div class="card-body py-3">
+                      <div class="lead font-weight-bold">@item.GetPropertyValue("blogTitle")</div>
+                        <p class="card-title text-muted my-0">@item.GetPropertyValue("excerpt")
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent text-uppercase ">
+                        <div class="float-right my-auto"><a href="@item.Url" class="example_f "> <span>READ MORE</span></a>
+                        </div>
+                        <p>@date</p>
+                    </div>
+                </div>
+            </div>
+    postCount++;      
+    } 
+    else{
+               <!-- big column -->
+            
+                <div class="d-flex align-items-stretch col-md-7 mt-3">
+                   <div class="card card-item shadow"style="background-color:@cardColor">
+                        @if (typedMediaPickerSingle != null)
+                        {
+                        
+                        <img class="card-img-top" src="@fImage.Url" alt="BLOG IMAGE MISSING, please bear with us">
+                        }  
+                    <p class="pl-3 pt-1 card-text bg-transparent text-muted">@item.GetPropertyValue("authorName") | @item.GetPropertyValue("authorTitle")
+                    </p>
+                    <div class="card-body py-3">
+                        <div class="lead font-weight-bold">@item.GetPropertyValue("blogTitle")</div>
+                        <p class="card-title text-muted my-0">@item.GetPropertyValue("excerpt")
+                        </p>
+                    </div>
+                    <div class="card-footer bg-transparent text-uppercase ">
+                        <div class="float-right my-auto"><a href="@item.Url" class="example_f "> <span>READ MORE</span></a>
+                        </div>
+                        <p>@date</p>
+                 @*<input type="color"> *@
+
+                    </div>
+                </div>
+                </div>
+             postCount++;      
+  }
+  
+    
+}
+         </div>
+    </div>
+        <nav aria-label="Page navigation example ">
+            <ul class="pagination  justify-content-center">
+                @if (page > 1)
+                {
+                    <li class="page-item">
+                        <a class="page-link" href="?page=@(page-1)" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                }
+
+                @for (int p = 1; p < totalPages + 1; p++)
+                {
+                    var active = (p == page) ? "active" : string.Empty;
+                    
+                    <li class="page-item @active"><a class="page-link" href="?page=@p">@p</a></li>
+
+                }
+                @if (page < items.Count())
+                { <li class="page-item">
+                    <a class="page-link" href="?page=@(page+1)" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+                }
+              
+               
+            </ul>
+        </nav>
+@Html.Partial("SiteLayout/_Footer")
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+                    <!-- Jquery and popper script-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+        <!-- Blog script-->
+           <script src="/scripts/blogScript.js"></script>
+
+    </body>
+</html>
+
+
+@{
+var editorsChoice = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("editorsChoice");
+    foreach (var eChoice in editorsChoice)
+    {
+    <div class=" col-12 ">
+        <div class="card card-item shadow mt-1">
+            <div class="card-body py-3">
+                <div class="excerpt card-title text-muted my-0">
+                    <a href="@eChoice.Url">
+                        @eChoice.GetPropertyValue("blogTitle")
+                    </a> </div>
+                <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                    @eChoice.GetPropertyValue("authorName") | @eChoice.GetPropertyValue("authorTitle")
+                </p>
+            </div>
+        </div>
+    </div>
+    }
+    }
