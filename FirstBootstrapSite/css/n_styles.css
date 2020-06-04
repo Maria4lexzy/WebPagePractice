@@ -1,0 +1,66 @@
+html,
+body {
+
+    height: 100%;
+    width: 100%;
+    color: #222;
+ 
+    font-family:'Poppins' sans-serif;
+    background: linear-gradient(248deg, rgba(0, 52, 80, 1) 0%, rgba(29, 43, 83, 1) 100%);
+}
+.nl-container{
+    position: fixed;
+    top: 25%;
+    left: 5%;
+    margin-top: -50px;
+ 
+height: 70%;
+  /*  margin: auto;*/
+    width: 90%;
+    background-color: whitesmoke;
+    box-shadow: 4px 7px 6px 0 black;
+    border-radius: .5rem;
+   border: 2px solid purple;
+    
+  
+}
+.padding{
+    padding: 2rem;
+  
+}
+.nl-body{
+    margin-bottom: 40px;
+ padding: 3rem;
+ 
+}
+.nl-body .btn{
+     padding:1rem 2rem;
+     margin-top: 40px;
+}
+.unsubscribe {
+   
+    background-color: darkorange;
+    color: white;
+}
+
+.unsubscribe:hover {
+   
+    color: white;
+    background-color: orange;
+}
+ .cancel {
+ 
+    color: white;
+    background-color: #003450;
+}
+ .cancel:hover{
+     color: white;
+    background-color: #2388a5;
+}
+
+/*---Media Queries --*/
+@media(max-width: 992px){
+
+}
+@media (max-width: 768px) {}
+@media (max-width: 576px) {}
