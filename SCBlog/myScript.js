@@ -1,24 +1,7 @@
 
 /*scroll function*/
 
-window.onscroll = function () { myFunction() };
 
-function myFunction() {
-    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    document.getElementById("myBar").style.width = scrolled + "%";
-}
-scrollToTop = document.getElementById("scrollTop");
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTop.style.display = "block";
-    } else {
-        scrollToTop.style.display = "none";
-    }
-}
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
@@ -124,8 +107,25 @@ $(document).ready(function () {
         });
     });
 
-    /**auto typing */
 
+    scrollToTop = document.getElementById("scrollTop");
+    window.onscroll = function () { scrollFunction() };
 
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollToTop.style.display = "block";
+        } else {
+            scrollToTop.style.display = "none";
+        }
+    }
 });
+
+window.onscroll = function () { myFunction() };
+
+function myFunction() {
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    document.getElementById("myBar").style.width = scrolled + "%";
+}
 
