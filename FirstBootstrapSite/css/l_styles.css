@@ -1,0 +1,138 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    color: #222;
+    font-family: 'Poppins'sans-serif;
+
+}
+
+#section-1 {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(45deg, #543093 32%, #d960ae 100%);
+    color: white;
+}
+
+.my-padding {
+    padding: 1.5rem;
+}
+
+.responsive img {
+    width: 100%;
+}
+
+
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00aced;
+}
+
+.fa-youtube {
+    color: #c50606;
+}
+
+.fa-instagram {
+    color: #517fa4;
+}
+
+.fa-instagram:hover,
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-twitter:hover,
+.fa-youtube:hover {
+    color: #d5d5d5;
+}
+
+footer {
+    background-color: rgba(27, 2, 23, 0.836);
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+
+hr.light {
+    border-top: 1px solid #d5d5d5;
+    width: 75%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    color: #d5d5d5;
+}
+
+hr.light-100 {
+    border-top: 1px solid #d5d5d5;
+    width: 100%;
+    margin-top: .8rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {}
+
+/*  
+.card-container{
+  margin-bottom: 2rem;
+}
+.my-cards .btn{
+    padding-top: .3rem;
+      
+}
+.card-body{
+    min-height: 350px;
+max-height: 450px;
+    border: 1px red solid;
+}
+
+footer{background-color: #547577;
+    color: #d5d5d5;
+    padding-top: 2rem;
+}
+
+/*---Media Queries --
+
+@media (max-width: 992px) {
+
+    .card-container{
+        max-width: 100%;       
+    }
+    .card-body{
+  
+       min-width: 10%;
+    }
+    
+.my-cards {
+    padding-bottom: 2rem; 
+       
+   }
+
+  }
+@media (max-width: 768px) {
+   
+    .card-container{
+        max-width: 80%;
+    }
+    .card-body{
+            border: 1px red solid;
+            padding-bottom:2rem;
+        }
+
+       
+
+    
+}
+@media (max-width: 576px) {
+    .card-container{
+        max-width: 50%;
+    }
+    
+
+  
+}  */
