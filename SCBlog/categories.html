@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CATEGORIES </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <link rel="stylesheet" href="css/grid_styles.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top ">
+        <div class="container-fluid"><a href="#" class="navbar-brand text-uppercase font-weight-bold"><img src=""
+                    alt="StartupCentral" height="40"></a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/om-os" class="nav-link">Om os</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vi Tilbyder</a>
+                        <div class="dropdown-menu text-left" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/vores-samarbejdspartnere/">Samarbejdspartnere</a>
+                            <a class="dropdown-item" href="/sc_startuplounge/">Netværksgruppe</a>
+                            <a class="dropdown-item" href="/sc_help/">Vi Tilbyder</a>
+                            <div>
+                    </li>
+                    <li class="nav-item"><a href="/Kontakt" class="nav-link ">Kontakt</a></li>
+                    <li class="nav-item"><a href="login-og-oprettelse" class="nav-link ">Login/Opret</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="progress-container ">
+        <div class="progress-bar" id="myBar"></div>
+    </div>
+    <!-- category header -->
+    <div class=" jumbotron categories-jumbotron">
+        <div class="row mt-5">
+            <div class="offset-md-1 col-md-8 offset-lg-2 col-lg-5 mt-lg-5">
+                <div class="row" data-toggle="sticky-onscroll">
+                    <div class=" col-6">
+                        <h3 class="text-uppercase m-3 ">Category Name</h3>
+                    </div>
+                    <div class=" col-6" id="my_search">
+                        <form class="form-inline d-flex  md-form form-sm active-cyan-2 m-3">
+                            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                                aria-label="Search">
+                            <i class="fas fa-search" aria-hidden="true" id="openNav"></i>
+                        </form>
+                    </div>
+                </div>
+
+                <p class="m-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempore
+                    tempora quis?</p>
+                <div class="blog-header__link d-flex  inline-flex text-center m-3">
+                    <a href="#" class=" example_f"> <span>EXPLORE MORE
+                            LIKE THIS</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- autotyping effect -->
+    <div class="container">
+        <button id="start">Click me</button>
+
+        <p id="demo">adfadfaf</p>
+
+    </div>
+
+    <br>
+    <!-- search cards -->
+    <div class="container search-result_cards">
+        <div class="row">
+            <div class="d-flex align-items-stretch col-md-10 mx-auto">
+                <div class="card card-item shadow ">
+                    <div class="card-body">
+                        <div class="row ">
+                            <div class="col-md-5  my-auto">
+                                <a href="#">
+                                    <h5 class="card-title">Card title: Lorem ipsum dolor harum aliquam consectetulaborum
+                                        consectetur
+                                        sunt ducimus.</h5>
+                                </a>
+                                <hr class="d-block d-md-none">
+                            </div>
+
+                            <div class="vl offset-1 col-md-1  my-auto"></div>
+                            <div class="col-md-5">
+                                <p class="card-text text-muted  my-auto">Some quick example text to build on the card
+                                    title and
+                                    make up
+                                    the
+                                    bulk of the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, odio!
+                                    card's
+                                    content.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="container-fluid" id="my_search">
+        <div class="row text-center">
+            <div class="col-md-12 mx-auto">
+                <form action="" method="GET" class="ezsearch-form">
+                    <input type="text" name="q" placeholder="sksljd" value="" />
+                    <input type="submit" value="search" />
+                </form>
+            </div>
+        </div>
+    </div> -->
+    <!-- Navigation -->
+
+    <div id="searchNav" class="  overlay">
+        <div class=" overlay-content">
+            <!-- search cards -->
+            <div class="search_nav">
+                <div class="row mx-auto" data-toggle="sticky-onscroll">
+                    <div class=" col-sm-6 my-auto float-left" id="my_search">
+                        <form class="form-inline d-flex  md-form form-sm active-cyan-2 ">
+                            <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                                aria-label="Search">
+                            <i class="fas fa-search" aria-hidden="true"></i>
+                        </form>
+                    </div>
+                    <div class="col-sm-6 float-right">
+                        <a href="javascript:void(0)" class="closebtn" id="closeNav">&times;</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class=" search-result_cards">
+                <div class="row">
+                    <div class="d-flex align-items-stretch col-md-10 mx-auto mt-3">
+                        <div class="card card-item shadow ">
+                            <div class="card-body">
+                                <div class="row ">
+                                    <div class="col-md-5  my-auto">
+                                        <a href="#">
+                                            <h5 class="card-title">Card title: Lorem ipsum dolor harum aliquam
+                                                consectetulaborum
+                                                consectetur
+                                                sunt ducimus.</h5>
+                                        </a>
+                                        <hr class="d-block d-md-none">
+                                    </div>
+
+                                    <div class="vl offset-1 col-md-1  my-auto"></div>
+                                    <div class="col-md-5">
+                                        <p class="card-text text-muted  my-auto">Some quick example text to build on
+                                            the card
+                                            title and
+                                            make up
+                                            the
+                                            bulk of the Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Porro, odio!
+                                            card's
+                                            content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-stretch col-md-10 mx-auto mt-3">
+                        <div class="card card-item shadow ">
+                            <div class="card-body">
+                                <div class="row ">
+                                    <div class="col-md-5  my-auto">
+                                        <a href="#">
+                                            <h5 class="card-title">Card title: Lorem ipsum dolor harum aliquam
+                                                consectetulaborum
+                                                consectetur
+                                                sunt ducimus.</h5>
+                                        </a>
+                                        <hr class="d-block d-md-none">
+                                    </div>
+
+                                    <div class="vl offset-1 col-md-1  my-auto"></div>
+                                    <div class="col-md-5">
+                                        <p class="card-text text-muted  my-auto">Some quick example text to build on
+                                            the card
+                                            title and
+                                            make up
+                                            the
+                                            bulk of the Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Porro, odio!
+                                            card's
+                                            content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-stretch col-md-10 mx-auto mt-3">
+                        <div class="card card-item shadow ">
+                            <div class="card-body">
+                                <div class="row ">
+                                    <div class="col-md-5  my-auto">
+                                        <a href="#">
+                                            <h5 class="card-title">Card title: Lorem ipsum dolor harum aliquam
+                                                consectetulaborum
+                                                consectetur
+                                                sunt ducimus.</h5>
+                                        </a>
+                                        <hr class="d-block d-md-none">
+                                    </div>
+
+                                    <div class="vl offset-1 col-md-1  my-auto"></div>
+                                    <div class="col-md-5">
+                                        <p class="card-text text-muted  my-auto">Some quick example text to build on
+                                            the card
+                                            title and
+                                            make up
+                                            the
+                                            bulk of the Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Porro, odio!
+                                            card's
+                                            content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-stretch col-md-10 mx-auto mt-3">
+                        <div class="card card-item shadow ">
+                            <div class="card-body">
+                                <div class="row ">
+                                    <div class="col-md-5  my-auto">
+                                        <a href="#">
+                                            <h5 class="card-title">Card title: Lorem ipsum dolor harum aliquam
+                                                consectetulaborum
+                                                consectetur
+                                                sunt ducimus.</h5>
+                                        </a>
+                                        <hr class="d-block d-md-none">
+                                    </div>
+
+                                    <div class="vl offset-1 col-md-1  my-auto"></div>
+                                    <div class="col-md-5">
+                                        <p class="card-text text-muted  my-auto">Some quick example text to build on
+                                            the card
+                                            title and
+                                            make up
+                                            the
+                                            bulk of the Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Porro, odio!
+                                            card's
+                                            content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-stretch col-md-10 mx-auto mt-3">
+                        <div class="card card-item shadow ">
+                            <div class="card-body">
+                                <div class="row ">
+                                    <div class="col-md-5  my-auto">
+                                        <a href="#">
+                                            <h5 class="card-title">Card title: Lorem ipsum dolor harum aliquam
+                                                consectetulaborum
+                                                consectetur
+                                                sunt ducimus.</h5>
+                                        </a>
+                                        <hr class="d-block d-md-none">
+                                    </div>
+
+                                    <div class="vl offset-1 col-md-1  my-auto"></div>
+                                    <div class="col-md-5">
+                                        <p class="card-text text-muted  my-auto">Some quick example text to build on
+                                            the card
+                                            title and
+                                            make up
+                                            the
+                                            bulk of the Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                            Porro, odio!
+                                            card's
+                                            content.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Hic consequuntur culpa deserunt optio adipisci
+            alias
+            quidem porro illum sunt sit eos harum veniam fuga, quam, facilis ut earum repudiandae velit enim?
+            Ratione
+            nam
+            culpa ducimus maxime saepe adipisci impedit at beatae provident qui eos minima blanditiis, eveniet iste
+            ab
+            laudantium. Dolore, eum? Quibusdam cumque nobis autem minima recusandae sint placeat facere numquam
+            nulla
+            necessitatibus, assumenda quis mollitia veniam fugit? Incidunt architecto ab maxime debitis dolorem.
+            Nesciunt
+            facere aut repudiandae, quibusdam voluptatibus similique dolorum nam consequatur, dolorem vitae,
+            repellendus
+            eos
+            nobis quisquam sit beatae rerum pariatur reprehenderit ipsum consequuntur esse fugit? Alias, explicabo
+            facere
+            illo quos ipsum, a tempora fuga quia quibusdam est molestias temporibus obcaecati provident expedita
+            consequuntur dolores aliquam maxime omnis laboriosam totam. Laboriosam minima sit, distinctio quasi
+            aliquam
+            facere ad neque aut impedit aperiam excepturi tenetur corrupti cumque consectetur voluptates esse
+            laudantium
+            laborum iste, iure doloremque, atque nulla! Repellendus minus soluta nemo error incidunt modi quod eum
+            quam,
+            cupiditate neque. Quibusdam ratione praesentium suscipit ex molestias itaque optio neque natus labore
+            possimus
+            consequatur recusandae deserunt molestiae eligendi eum iste consequuntur quas, eos laudantium. Ratione
+        </p>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <p id="scrolller"> perferendis, corrupti adipisci suscipit itaque
+            labore deleniti sit aut
+            debitis odit enim mollitia est minus
+            dolorem architecto aliquid totam molestiae deserunt quas, maiores magni veniam cupiditate omnis aliquam!
+            Eligendi blanditiis amet doloremque harum facere eveniet earum voluptatibus dignissimos aliquid sit
+            nihil
+            repudiandae totam adipisci, expedita quisquam accusantium ab rem ducimus fugit deleniti quibusdam
+            veritatis.
+            Repellat, quibusdam provident fugiat quam beatae, rerum itaque, nobis velit fugit nemo mollitia impedit?
+            Dolorum
+            dolore asperiores laboriosam enim quae! Vel quas sapiente itaque vitae possimus pariatur, quaerat ipsam?
+            Reiciendis culpa perferendis odit laborum consectetur alias iusto molestiae excepturi debitis
+            exercitationem
+            assumenda aperiam distinctio omnis enim aspernatur modi itaque iste corporis quaerat magnam esse,
+            explicabo
+            facere quod. Praesentium, sapiente voluptatibus!</p>
+
+        <hr>
+        <br>
+        <hr>
+        <p> perferendis, corrupti adipisci suscipit itaque labore deleniti sit aut debitis odit enim mollitia est
+            minus
+            dolorem architecto aliquid totam molestiae deserunt quas, maiores magni veniam cupiditate omnis aliquam!
+            Eligendi blanditiis amet doloremque harum facere eveniet earum voluptatibus dignissimos aliquid sit
+            nihil
+            repudiandae totam adipisci, expedita quisquam accusantium ab rem ducimus fugit deleniti quibusdam
+            veritatis.
+            Repellat, quibusdam provident fugiat quam beatae, rerum itaque, nobis velit fugit nemo mollitia impedit?
+            Dolorum
+            dolore asperiores laboriosam enim quae! Vel quas sapiente itaque vitae possimus pariatur, quaerat ipsam?
+            Reiciendis culpa perferendis odit laborum consectetur alias iusto molestiae excepturi debitis
+            exercitationem
+            assumenda aperiam distinctio omnis enim aspernatur modi itaque iste corporis quaerat magnam esse,
+            explicabo
+            facere quod. Praesentium, sapiente voluptatibus!</p>
+
+        <hr>
+    </div>
+    <!-- Blog Categories -->
+    <div class="container categories">
+        <div class="row">
+            <!-- Iværksætteri -->
+            <div class="col-md-12">
+                <div class="excerpt card category_card-item mw-100 shadow mt-1"
+                    style="border:none; border-left: rgb(226, 141, 43) 5px solid;">
+                    <div class="card-body py-3">
+                        <div class="card-text text-uppercase font-weight-bold ">
+                            <div class="float-left">
+                                <a href="">Iværksætteri</a>
+                            </div>
+                            <div class="float-right"><i class="fas fa-arrow-right float-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Salg & marketing -->
+            <div class="col-md-12">
+                <div class="excerpt card category_card-item mw-100 shadow mt-1"
+                    style="border:none; border-left: blueviolet 5px solid;">
+                    <div class="card-body py-3">
+                        <div class="card-text text-uppercase font-weight-bold ">
+                            <div class="float-left">
+                                <a href="">Salg & marketing</a>
+                            </div>
+                            <div class="float-right"><i class="fas fa-arrow-right float-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Økonomi -->
+            <div class="col-md-12">
+                <div class="excerpt card category_card-item mw-100 shadow mt-1"
+                    style="border:none; border-left: #0277BD 5px solid;">
+                    <div class="card-body py-3">
+                        <div class="card-text text-uppercase font-weight-bold ">
+                            <div class="float-left">
+                                <a href="/Økonomi">Økonomi</a>
+                            </div>
+                            <div class="float-right"><i class="fas fa-arrow-right float-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Udvikling & produktion -->
+            <div class="col-md-12">
+                <div class="excerpt card category_card-item mw-100 shadow mt-1"
+                    style="border:none; border-left: #00796B 5px solid;">
+                    <div class="card-body py-3">
+                        <div class="card-text text-uppercase font-weight-bold ">
+                            <div class="float-left">
+                                <a href="/Udvikling & produktion">Udvikling & produktion</a>
+                            </div>
+                            <div class="float-right"><i class="fas fa-arrow-right float-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Strategi & optimering  -->
+            <div class="col-md-12">
+                <div class="excerpt card category_card-item mw-100 shadow mt-1"
+                    style="border:none; border-left: #880E4F 5px solid;">
+                    <div class="card-body py-3">
+                        <div class="card-text text-uppercase font-weight-bold ">
+                            <div class="float-left">
+                                <a href="/Strategi & optimering">Strategi & optimering</a>
+                            </div>
+                            <div class="float-right"><i class="fas fa-arrow-right float-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Logistik  -->
+            <div class="col-md-12">
+                <div class="excerpt card category_card-item mw-100 shadow mt-1"
+                    style="border:none; border-left: rgb(87, 0, 95) 5px solid;">
+                    <div class="card-body py-3">
+                        <div class="card-text text-uppercase font-weight-bold ">
+                            <div class="float-left">
+                                <a href="/Logistik">Logistik</a>
+                            </div>
+                            <div class="float-right"><i class="fas fa-arrow-right float-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Ledelse & HR -->
+            <div class="col-md-12">
+                <div class="excerpt card category_card-item mw-100 shadow mt-1"
+                    style="border:none; border-left: rgb(3, 121, 81) 5px solid;">
+                    <div class="card-body py-3">
+                        <div class="card-text text-uppercase font-weight-bold ">
+                            <div class="float-left">
+                                <a href="/Ledelse & HR">Ledelse & HR</a>
+                            </div>
+                            <div class="float-right"><i class="fas fa-arrow-right float-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Jura & forsikring -->
+            <div class="col-md-12">
+                <div class="excerpt card category_card-item mw-100 shadow mt-1"
+                    style="border:none; border-left: rgb(223, 1, 12) 5px solid;">
+                    <div class="card-body py-3">
+                        <div class="card-text text-uppercase font-weight-bold ">
+                            <div class="float-left">
+                                <a href="/Jura & forsikring">Jura & forsikring</a>
+                            </div>
+                            <div class="float-right"><i class="fas fa-arrow-right float-right"></i> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+
+
+    <!-- scripts -->
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+    <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+    <script type="text/javascript" src="bootpag.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script src="myScript.js"></script>
+
+
+</body>
+
+</html>

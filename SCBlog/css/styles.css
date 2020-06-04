@@ -1,0 +1,56 @@
+/*
+*
+* ==========================================
+* NAVBAR MARIA
+* ==========================================
+*
+*/
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+}
+
+
+
+.show-neighbors {
+    overflow: hidden;
+}
+
+.show-neighbors .carousel-indicators {
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+.show-neighbors .carousel-control-prev,
+.show-neighbors .carousel-control-next {
+    background: rgba(255, 255, 255, 0.3);
+    width: 25%;
+    z-index: 11;
+    /* .carousel-caption has z-index 10 */
+}
+
+.show-neighbors .carousel-inner {
+    width: 150%;
+    left: -25%;
+}
+
+.show-neighbors .carousel-item-next:not(.carousel-item-left),
+.show-neighbors .carousel-item-right.active {
+    -webkit-transform: translate3d(33%, 0, 0);
+    transform: translate3d(33%, 0, 0);
+}
+
+.show-neighbors .carousel-item-prev:not(.carousel-item-right),
+.show-neighbors .carousel-item-left.active {
+    -webkit-transform: translate3d(-33%, 0, 0);
+    transform: translate3d(-33%, 0, 0);
+}
+
+.show-neighbors .item__third {
+    float: left;
+    position: relative;
+    /* captions can now be added */
+    width: 33.33333333%;
+}

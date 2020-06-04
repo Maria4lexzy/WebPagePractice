@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SC Blog Main</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <link rel="stylesheet" href="css/grid_styles.css">
+    <link rel="icon" type="image/png" href="img/Happy-Envelope.png" />
+
+</head>
+
+<body>
+    <!-- facebook comments -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v6.0"></script>
+
+    <!-- blog header -->
+    <div class="jumbotron  blog-header img-fluid"
+        style="background-image: url(https://www.startupcentral.dk/media/1644/cardsbg.png);">
+        <div class="row">
+            <div class="offset-md-1 col-md-8 offset-lg-2 col-lg-5 text-white p-5 ">
+                <img src="img/suc-blue-logo.svg">
+                <h3 class="text-uppercase"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+                    cupiditate.</h3>
+                <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempore
+                    tempora quis?</p>
+                <div class="blog-header__link d-flex  inline-flex text-center">
+                    <a href="#" class=" example_f"> <span>BECOME MEMBER</span></a>
+                    <a href="post.html" class="example_f "> <span>Read more</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Header -->
+    <!-- Blog Main: containeng featured posts + editors choice + .... -->
+    <div class="container mt-5">
+        <div class=" row">
+            <!-- Featured post -->
+            <div class=" d-flex align-items-stretch  content-container  col-lg-7 col-xl-8 col-xxl-9">
+                <div class="card card-item shadow-md  ">
+                    <img class="card-img-top" src="img/desk.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text text-muted">Some quick example text to build on the card title and make up
+                            the
+                            bulk of the
+                            card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, harum, ab
+                            impedit ipsa, corrupti modi at illum tempore est voluptatem ut! Vitae veniam illum placeat
+                            qui
+                            id adipisci vel quasi rem sit, facilis sequi beatae quo iure deleniti explicabo nobis! Lorem
+                            ipsum dolor sit amet consectetur adipisicing elit. Totam, ratione!</p>
+                    </div>
+                    <div class="card-footer bg-transparent text-uppercase ">
+                        <div class="float-right my-auto"> <a href="post.html" class="example_f "> <span>Read
+                                    more</span></a>
+                        </div>
+                        <p>stuff</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /Feautured post -->
+            <!-- side bar containing top picks and editors choice -->
+            <div
+                class="d-none d-sm-none d-lg-block d-flex align-items-stretch  sidebar-container  col-lg-5 col-xl-4 col-xxl-3">
+                <div class=" row">
+                    <div class="col-sm-6 col-md-12 ">
+                        <!-- top picks-->
+                        <div class="col-12">
+                            <p class="text-uppercase sidebar__headings text-center mt-sm-3 mt-md-3 mb-1 mt-lg-0">Top
+                                Picks
+                            </p>
+                        </div>
+
+                        <div class="col-12 ">
+                            <div class="excerpt card card-item mw-100 shadow mt-1">
+                                <div class="card-body py-3">
+                                    <a href="#">
+                                        <p class="card-title  my-0 overflow-hidden excerpt">
+                                            Lorem ipsum dolor sit amet consur adipisicing
+                                            elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                            Consequuntur,
+                                            aliquam.
+                                        </p>
+                                    </a>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        8th march | 10 min read
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" col-12 ">
+                            <div class="card card-item shadow mt-1">
+                                <div class="card-body py-3">
+                                    <p class="card-title text-muted my-0">Lorem ipsum dolor sit amet consur
+                                        adipisicing
+                                        elit.
+                                    </p>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        8th march | 10 min read
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-12 ">
+                            <div class="card card-item shadow mt-1">
+                                <div class="card-body py-3">
+                                    <p class="card-title excerpt text-muted my-0">Lorem ipsum dolor sit amet consur
+                                        adipisicing
+                                        elit.
+                                    </p>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        8th march | 10 min read
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Editors Choice -->
+                    <div class="col-sm-6 col-md-12">
+                        <div class="col-12">
+                            <p class="text-uppercase sidebar__headings text-center mt-sm-3 mt-md-3 mb-0">editors choice
+                            </p>
+                        </div>
+                        <div class=" col-12 ">
+                            <div class="card card-item shadow mt-1">
+                                <div class="card-body py-3">
+                                    <p class="card-title text-muted my-0">Lorem ipsum dolor sit amet consur adipisicing
+                                        elit.
+                                    </p>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        8th march | 10 min read
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-12 ">
+                            <div class="card card-item shadow mt-1">
+                                <div class="card-body py-3">
+                                    <p class="card-title text-muted my-0">Lorem ipsum dolor sit amet consur adipisicing
+                                        elit.
+                                    </p>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        8th march | 10 min read
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-12 ">
+                            <div class="card card-item shadow mt-1">
+                                <div class="card-body py-3">
+                                    <p class="card-title text-muted my-0">Lorem ipsum dolor sit amet consur adipisicing
+                                        elit.
+                                    </p>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        8th march | 10 min read
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-sm-none d-lg-block col-12 ">
+                            <div class="card card-item shadow mt-1">
+                                <div class="card-body py-3">
+                                    <p class="card-title text-muted my-0">Lorem ipsum dolor sit amet consur adipisicing
+                                        elit.
+                                    </p>
+                                    <p class=" card-text bg-transparent text-uppercase font-weight-bold ">
+                                        8th march | 10 min read
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- /side bar -->
+        </div>
+    </div>
+    <!-- Posts -->
+    <div class="container my-5">
+        <div class="row ">
+            <!-- small column -->
+            <div class="d-flex align-items-stretch col-md-5 m-0 ">
+                <div class="mx-1 card card-item shadow mt-1">
+                    <img class="card-img-top" src="img/water.jpg" alt="Card image cap">
+                    <p class="pl-3 pt-1 card-text bg-transparent text-muted">
+                        8th of march 2020 | idiotness
+                    </p>
+                    <div class="card-body py-3">
+                        <p class="card-title text-muted my-0">Lorem ipsum dolor sit amet consur adipisicing
+                            elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui sunt voluptate libero
+                            minima
+                            dignissimos delectus dolores rerum cupiditate neque excepturi!
+                        </p>
+
+                    </div>
+                    <div class="card-footer bg-transparent text-uppercase ">
+                        <div class="float-right my-auto"> <a href="post.html" class="example_f "> <span>Read
+                                    more</span></a>
+                        </div>
+                        <p> ~10 min read</p>
+                    </div>
+                </div>
+            </div>
+            <!-- big column -->
+            <div class="d-flex align-items-stretch col-md-7 m-0">
+                <div class="card card-item shadow ">
+                    <img class="card-img-top" src="img/water.jpg" alt="Card image cap">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text text-muted">Some quick example text to build on the card title and make up
+                            the
+                            bulk of the Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, odio! card's
+                            content.</p>
+                    </div>
+                    <div class="card-footer bg-transparent text-uppercase ">
+                        <div class="float-right my-auto"> <a href="post.html" class="example_f "> <span>Read
+                                    more</span></a>
+                        </div>
+                        <p>stuff</p>
+                    </div>
+                </div>
+            </div>
+            <!-- new row start -->
+            <div class="d-flex align-items-stretch col-md-8 my-3">
+                <div class="card card-item shadow">
+                    <img class="card-img-top" src="img/desk.jpg" alt="Card image cap">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <div class="lead font-weight-bold">Blog title</div>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                    <div class="card-footer  text-uppercase ">
+                        <div class="float-right my-auto"> <a href="post.html" class="example_f "> <span>Read
+                                    more</span></a>
+                        </div>
+                        <p>stuff</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex align-items-stretch col-md-4 my-3">
+                <div class="card card-item shadow">
+                    <img class="card-img-top" src="img/desk.jpg" alt="Card image cap">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                    </div>
+                    <div class="card-footer bg-transparent text-uppercase ">
+
+                        <p>stuffkkkk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="stage">
+        <div class="box bounce-7"></div>
+    </div>
+    <button onclick="topFunction()" id="scrollTop" title="Go to top" class="toTopBounce "><i
+            class="fas fa-arrow-up"></i></button>
+
+
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+    <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+    <script type="text/javascript" src="bootpag.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script src="myScript.js"></script>
+
+
+</body>
+
+</html>
