@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>self promotion </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    <!-- owl carousel stylesheet -->
+    <link rel="stylesheet" href="vlog.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        rel="stylesheet" />
+
+
+
+</head>
+<!-- search bar -->
+
+<body>
+
+
+    </div>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+               
+                <div class=" card card-item  my-3">
+                    <div class="row text-center d-flex align-items-center ">
+                        <div class="  col-md-5 ">
+                            <iframe width="260" height="150" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+                            </iframe>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#">
+                                <div class="lead">TITLE OF VIDEO</div>
+                                <p>short description</p>
+                            </a>
+                        </div>
+                        <div class="col-md-2 px-2">
+                            <a href="#" type="button" class="btn read-more" data-toggle="collapse"
+                                data-target="#company-description2" aria-expanded="false"
+                                aria-controls="company-description2">
+                                <span id="aup" class="arrowdown ">READ MORE</span></a>
+                        </div>
+                    </div>
+
+                    <div class=" mx-auto">
+                        <div class="collapse" id="company-description2">
+                            <div class="card card-body " style="border-radius: 0;">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
+                                richardson ad
+                                squid.
+                                Nihil anim
+                                keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
+                                proident.
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque porro soluta repellat nobis perferendis totam inventore, quo sapiente autem temporibus vero, iste magnam accusantium veritatis a beatae tempora nulla deserunt!
+
+    <!-- scripts -->
+
+    <script type="text/javascript" src="bootpag.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <!-- owl carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="index.js"></script>
+    <script>
+
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            dots: true,
+            center: true,
+            mouseDrag: true,
+            autoplay: true,
+            autoplayHoverPause: true,
+            navText: ["<i class='fa fa-chevron-left'></i>", "<i class='fa fa-chevron-right'></i>"],
+
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 1
+                },
+                1000: {
+                    items: 3
+                },
+                1800: {
+                    items: 4
+                }
+            }
+        });
+
+        var owl = $("#owl-demo");
+
+        owl.owlCarousel();
+
+        // Custom Navigation Events
+        $(".next").click(function () {
+            owl.trigger('owl.next');
+        })
+        $(".prev").click(function () {
+            owl.trigger('owl.prev');
+        });
+
+
+        /**
+         * Option dropdowns. Slide toggle
+         */
+        $("#bt1").on('click', function () {
+            $('#aup').toggleClass('arrowup').next(".arrowdown");
+        });
+
+
+    </script>
+</body>
+
+</html>
