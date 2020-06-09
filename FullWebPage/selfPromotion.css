@@ -1,0 +1,342 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(15, 35, 90);
+    background-color: #fafafa;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(15, 35, 90);
+}
+
+a:hover {
+    text-decoration: none;
+    color: #2388a5;
+}
+
+
+.card-item {
+    background-color: white;
+    border: none;
+    transition: all .5s;
+    border-radius: 0%;
+}
+
+.card-item:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transition: all .5s cubic-bezier(0.1, 0.6, 0.2, .5);
+
+}
+
+.card-item:hover::after {
+    transition: 1s;
+
+}
+
+.card.card-image {
+    position: relative;
+}
+
+.card-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.blue-text {
+    color: #2388a5;
+}
+
+.blue-text:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.btn-blue {
+    border: 2px solid #2388a5;
+    background-color: transparent;
+    color: white;
+}
+
+a .btn-blue {
+    color: white;
+}
+
+.btn-blue:hover {
+
+    background-color: #2388a5;
+
+}
+
+a:not([href]):not([tabindex]) {
+    color: white;
+}
+
+
+
+.shadow {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.read-more {
+    background-color: #003450;
+    border-radius: 5px;
+    color: white;
+    transition: ease .2s;
+}
+
+.read-more:hover {
+    background-color: #2388a5;
+    color: white;
+    transition: ease .2s;
+}
+
+ul.ks-cboxtags {
+    list-style: none;
+    padding: 20px;
+}
+
+ul.ks-cboxtags li {
+    display: inline;
+}
+
+ul.ks-cboxtags li label {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, .9);
+    border: 2px solid rgba(139, 139, 139, .3);
+    color: #adadad;
+    border-radius: 25px;
+    white-space: nowrap;
+    margin: 3px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .3s;
+}
+
+ul.ks-cboxtags li label {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+ul.ks-cboxtags li label::before {
+    display: inline-block;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 12px;
+    padding: 2px 6px 2px 2px;
+    content: "\271a";
+    transition: transform .3s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked+label::before {
+    content: "\2713";
+    transform: rotate(-360deg);
+    transition: transform .2s ease-in-out;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked+label {
+    border: 2px solid #2388a5;
+    background-color: #2388a5;
+    color: #fff;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+    display: absolute;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:focus+label {
+    border: 2px solid rgba(139, 139, 139, .3);
+
+}
+
+.owl-carousel .item .card {
+    min-height: 380px;
+}
+
+.owl-dots li {
+
+    top: 200px;
+    width: 1.25rem;
+    max-width: 1.25rem;
+    height: 1.25rem;
+    margin-bottom: -3.75rem;
+    background-color: #4285f4;
+}
+
+
+
+.owl-carousel .owl-item .feedback-user {
+    position: relative;
+}
+
+.owl-carousel .owl-dots {
+    text-align: center;
+}
+
+.owl-carousel .owl-dot {
+    border-radius: 50px;
+    height: 6px;
+    width: 30px;
+    display: inline-block;
+    background: rgba(127, 127, 127, 0.5) !important;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.owl-carousel .owl-dot.active {
+    background: black !important;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    color: rgba(7, 27, 83, 0.6);
+    font-size: 2.5rem;
+    position: absolute;
+}
+
+.fa-chevron-left {
+    top: 45%;
+    left: 20px;
+}
+
+.fa-chevron-right {
+    top: 45%;
+    right: 20px;
+}
+
+.owl-carousel .nav-btn {
+    height: 87px;
+    position: absolute;
+    width: 86px;
+    cursor: pointer;
+    top: 45vh !important;
+}
+
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled {
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+.owl-carousel .prev-slide {
+    left: -93px;
+
+}
+
+.owl-carousel .next-slide {
+    right: -33px;
+}
+
+
+.carousel-inner {
+    position: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 0;
+    margin-right: 15%;
+    margin-left: 15%;
+    list-style: none;
+}
+
+.arrowdown::after {
+    content: '\2193';
+    padding: 2rem 1rem;
+
+}
+
+.arrowup::after {
+    content: '\2191';
+    padding: 2rem 1rem;
+
+}
+
+.carousel-multi-item .controls-top {
+    margin-bottom: 1.88rem;
+    text-align: center;
+}
+
+.carousel-multi-item .carousel-indicators li {
+    width: 1.25rem;
+    max-width: 1.25rem;
+    height: 1.25rem;
+    margin-bottom: -3.75rem;
+    background-color: #4285f4;
+}
+
+.carousel-multi-item .carousel-indicators li {
+    width: 1.25rem;
+    max-width: 1.25rem;
+    height: 1.25rem;
+    margin-bottom: -3.75rem;
+    background-color: #4285f4;
+    border-radius: 50%;
+}
+
+.carousel-multi-item .carousel-indicators .active {
+    width: 1.56rem;
+    max-width: 1.56rem;
+    height: 1.56rem;
+    background-color: #4285f4;
+    border-radius: 50%;
+}
+
+.carousel-multi-item .active {}
+
+.card-body {
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+}
+
+.carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transition: -webkit-transform .6s ease-in-out;
+    transition: transform .6s ease-in-out;
+    transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out;
+}
+
+.carousel-multi-item .controls-top {
+    margin-bottom: 1.88rem;
+    text-align: center;
+}
