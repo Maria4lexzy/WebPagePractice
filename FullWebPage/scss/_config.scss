@@ -1,0 +1,87 @@
+/***** colors ******/
+$light-color: #f4f4f4;
+$primary-color:#447fdf;
+$secondary-color:#ff8700;
+/***** neumorphic ******/
+$npm-bg-light: linear-gradient(145deg, #dcdcdc, #ffffff);
+$npm-bg-dark: linear-gradient(145deg, #313030, #3a3939);
+$npm-inner-dark:#383737;
+$npm-outer-dark:#2a2929;
+$npm-inner-light:#ffffff;
+$npm-outer-light: #d7d7d7;
+
+
+
+
+/***** font ******/
+$font-stack:Arial,
+Helvetica,
+sans-serif;
+
+/*****  Set the text color based on background color  ******/
+@function set-text-color($color) {
+    @if (lightness($color)>70) {
+        @return #333;
+
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+//set background & text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+
+}
+
+/*******************in progress***************************/
+/*********** neumorphic properties ************/
+
+/***** neumorphic properties ******/
+@function set-npm-color($color) {
+    @if (lightness($color)>70) {
+        @return #333;
+
+    }
+
+    @else {
+        @return #fff;
+    }
+}
+
+/***** neumorphic set inner shadow color ******/
+
+@mixin set-npm-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+
+}
+
+/*******************\in progress***************************/
+
+@mixin npm-flat() {
+    border-radius: 15px;
+    background: $npm-bg-light;
+    box-shadow: 10px 10px 20px $npm-outer-light,
+        -10px -10px 20px $npm-inner-light;
+
+}
+
+@mixin npm-concave() {
+    border-radius: 15px;
+    background: $npm-bg-light;
+    box-shadow: 10px 10px 20px $npm-outer-light,
+        -10px -10px 20px $npm-inner-light;
+
+}
+
+@mixin npm-convex() {
+    border-radius: 15px;
+    background: $npm-bg-light;
+    box-shadow: 10px 10px 20px $npm-outer-light,
+        -10px -10px 20px $npm-inner-light;
+
+}

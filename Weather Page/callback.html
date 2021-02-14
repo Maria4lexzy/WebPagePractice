@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Complete Bootstrap 4 Website Layout</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="weather-header" class="view jumbotron card-image blog-item-jumbotron h-50 px-5 py-5" style=" background: linear-gradient(rgba(129, 172, 238, 0.7),
+                rgba(2, 17, 49, 0.7)), url(img/PHO_6608.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
+
+        <div class="col-md-6 mx-auto text-white text-center">
+            <!-- blog title and author name -->
+
+            <h4 class="h4 mt-2 mb-5">Weather Forecast & Weather History</h4>
+
+
+
+            <div id="locations">
+                <a href="#horsens" class="ml-2"><i class="fas fa-map-marked-alt"></i> Horsens</a>
+                <a href="#aarhus" class="ml-2"><i class="fas fa-map-marked-alt"></i> Århus</a>
+                <a href="#horsens" class="ml-2"><i class="fas fa-map-marked-alt"></i> Copenhagen</a>
+            </div>
+        </div>
+
+    </div>
+    <!-- * All data for the latest measurement of each kind
+
+* Minimum temperature for the last 5 days
+
+* Maximum temperature for the last 5 days
+
+* Total precipitation for the last 5 days
+
+* Average wind speed for the last 5 days
+
+* Dominant wind direction for the last 5 days
+
+* Average cloud coverage for the last 5 days
+
+* Hourly predictions for the next 24 hours. -->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-md-12 offset-lg-1 ">
+                <!-- Card rgba(238,174,202,1 -->
+                <div class="card py-2 mb-4 city" id="horsens" style=" background: linear-gradient(rgba(219, 120, 163, 0.7),
+                rgba(5, 36, 71, 1) 100%), url(img/PHO_8442.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
+                    <div class="row text-center" id="horsens_now">
+                        <div class="col-12">
+
+                            <p class="my-0" id="horsens_now_time">October 13</p>
+                            <b>
+                                <p class="my-0 lead" id="horsens_now_temp">23*</p>
+                            </b>
+                            <p class="my-0" id="horsens_now_min-max-temp">23/46</p>
+                            <p class="my-0" id="horsens_now_type">cloudy</p>
+                            <p class="my-3" id="horsens_place"><i class="fas fa-map-marked-alt"></i> Horsens</p>
+                        </div>
+                    </div>
+                    <div class="row text-center py-2" id="aarhus_trigger">
+                        <div class="col-6">
+                            <button class="btn my_btn" type="button" data-toggle="collapse"
+                                data-target="#horsens-data-history" aria-expanded="false"
+                                aria-controls="horsens-data-history">
+                                WEATHER HISTORY
+                            </button>
+                        </div>
+
+                        <div class="col-6">
+                            <button class="btn my_btn" type="button" data-toggle="collapse"
+                                data-target="#horsens-data-forecast" aria-expanded="false"
+                                aria-controls="horsens-data-forecast">
+                                WEATHER FORECAST
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row" id="horsens-data">
+                        <div class="col-12">
+                            <div class="collapse" id="horsens-data-history">
+                                <b>
+                                    <p>Weather History for Horsens</p>
+                                </b>
+                                <table id="horsens-data-history-table" class="table table-striped">
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">Date & Time</th>
+                                            <th scope="col">Weather Type</th>
+                                            <th scope="col">Value</th>
+                                            <th scope="col">Unit</th>
+                                            <th scope="col">Direction/Precipitation Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="weather-">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="collapse" id="horsens-data-forecast">
+                                <b>
+                                    <p>Weather Forecast for Horsens</p>
+                                </b>
+                                <table id="horsens-data-forecast-table" class="table table-striped">
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">Date & Time</th>
+                                            <th scope="col">Weather Type</th>
+                                            <th scope="col">Value</th>
+                                            <th scope="col">Unit</th>
+                                            <th scope="col">Direction/Precipitation Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="weather-">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+    </div>
+    <!-- ÅRHUS -->
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-md-12 offset-lg-1 ">
+                <!-- Card rgba(238,174,202,1 -->
+                <div class="card py-2 mb-4 city" id="aarhus" style=" background: linear-gradient(rgba(219, 120, 163, 0.7),
+                rgba(5, 36, 71, 1) 100%), url(img/PHO_8442.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
+                    <div class="row text-center" id="aarhus_now">
+                        <div class="col-12">
+
+                            <p class="my-0" id="aarhus_now_time">October 13</p>
+                            <p class="lead my-0" id="aarhus_now_temp">23*</p>
+                            <p class="my-0" id="aarhus_now_min-max-temp">23/46</p>
+                            <p class="my-0" id="aarhus_now_type">cloudy</p>
+                            <p class="my-3" class="my-3" id="horsens_place"><i class="fas fa-map-marked-alt"></i>Århus
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row text-center py-2" id="aarhus_trigger">
+                        <div class="col-6">
+                            <button class="btn my_btn" type="button" data-toggle="collapse"
+                                data-target="#aarhus-data-history" aria-expanded="false"
+                                aria-controls="aarhus-data-history">
+                                WEATHER HISTORY
+                            </button>
+                        </div>
+
+                        <div class="col-6">
+                            <button class="btn my_btn" type="button" data-toggle="collapse"
+                                data-target="#aarhus-data-forecast" aria-expanded="false"
+                                aria-controls="aarhus-data-forecast">
+                                WEATHER FORECAST
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row" id="aarhus-data">
+                        <div class="col-12">
+                            <div class="collapse" id="aarhus-data-history">
+                                <b>
+                                    <p>Weather History for aarhus</p>
+                                </b>
+                                <table id="aarhus-data-history-table" class="table table-striped">
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">Date & Time</th>
+                                            <th scope="col">Weather Type</th>
+                                            <th scope="col">Value</th>
+                                            <th scope="col">Unit</th>
+                                            <th scope="col">Direction/Precipitation Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="weather-">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="collapse" id="aarhus-data-forecast">
+                                <b>
+                                    <p>Weather Forecast for aarhus</p>
+                                </b>
+                                <table id="aarhus-data-forecast-table" class="table table-striped">
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">Date & Time</th>
+                                            <th scope="col">Weather Type</th>
+                                            <th scope="col">Value</th>
+                                            <th scope="col">Unit</th>
+                                            <th scope="col">Direction/Precipitation Type</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="weather-">
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+    </div>
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+
+    <script src="callback.js"></script>
+
+</body>
+
+</html>

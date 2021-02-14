@@ -1,0 +1,28 @@
+#weather-header {
+    border-radius: 0;
+}
+
+#locations a,
+.my_btn {
+    color: rgb(209, 209, 209);
+    border: 1px solid rgb(125, 16, 168);
+    padding: .3rem 1rem;
+    text-decoration: none;
+    background-color: rgb(165, 48, 211);
+    border-radius: .2rem;
+    transition: all ease-out 0.2s;
+
+
+}
+
+#locations a:hover,
+.my_btn:hover {
+    background-color: rgb(238, 213, 248);
+    color: rgb(102, 12, 138);
+    text-decoration: none;
+    transition: all ease-in 0.2s;
+}
+
+#horsens {
+    color: rgb(255, 168, 243);
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>self promotion </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,200;1,600&display=swap"
+        rel="stylesheet">
+    <!-- owl carousel stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        rel="stylesheet" />
+
+    <!-- custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- search bar -->
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light ">
+        <div class="container-fluid"><a href="#" class="navbar-brand text-uppercase font-weight-bold"><img src=""
+                    alt="StartupCentral" height="40"></a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right"><i class="fa fa-bars"></i></button>
+
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="/om-os" class="nav-link">Om os</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vi Tilbyder</a>
+                        <div class="dropdown-menu text-left" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/vores-samarbejdspartnere/">Samarbejdspartnere</a>
+                            <a class="dropdown-item" href="/sc_startuplounge/">Netværksgruppe</a>
+                            <a class="dropdown-item" href="/sc_help/">Vi Tilbyder</a>
+                            <div>
+                    </li>
+                    <li class="nav-item"><a href="/Kontakt" class="nav-link ">Kontakt</a></li>
+                    <li class="nav-item"><a href="login-og-oprettelse" class="nav-link ">Login/Opret</a></li>
+                </ul>
+                <form class="form-inline">
+                    <div class="md-form my-0">
+                        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <!-- /navigation bar -->
+
+
+
+    <!-- scripts -->
+    <!-- Boostrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- /Boostrap -->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <!-- owl carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+<script> /** navigation scroll effect*/
+    $('#iconified').on('keyup', function () {
+        var input = $(this);
+        if (input.val().length === 0) {
+            input.addClass('empty');
+        } else {
+            input.removeClass('empty');
+        }
+    });
+    $(function () {
+        $(window).on('scroll', function () {
+            if ($(window).scrollTop() > 10) {
+                $('.navbar').addClass('active');
+            } else {
+                $('.navbar').removeClass('active');
+            }
+        });
+    });
+</script>

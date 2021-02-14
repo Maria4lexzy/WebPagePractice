@@ -1,0 +1,27 @@
+%nav {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 8px 20px;
+    margin: 3px;
+
+    &hover {
+        transform: scale(.98);
+    }
+}
+
+.navbar-collapse {
+    @extend %nav;
+    @include set-background(lighten($primary-color, 10%));
+}
+
+.btn-primary {
+    @extend %nav;
+    @include set-background(lighten($primary-color, 10%));
+}
+
+.btn-secondary {
+    @extend %nav;
+    @include set-background($secondary-color);
+
+
+}

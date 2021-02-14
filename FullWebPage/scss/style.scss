@@ -1,0 +1,40 @@
+@import 'config';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: $light-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+#box {
+    width: 80px;
+    height: 80px;
+    @include npm-convex();
+}
+
+p {
+    padding: 0 1rem;
+    @include npm-flat();
+
+}
+
+/***** partials ******/
+@import '_utilities';
+@import '_buttons';
+@import '_mobile';
+@import '_navbar';
